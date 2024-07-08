@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter And Search</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="header-nav container flex-container">
+            <h1 class="logo"><a class="logo-link" href="#">Gurukul</a></h1>
+            <ul class="header-menu flex-container">
+                <li><a class="header-menu-link" href="#">Home</a></li>
+                <li><a class="header-menu-link" href="/about">Courses</a></li>
+                <li><a class="header-menu-link" href="">Community</a></li>
+                <li><a class="header-menu-link" href="#about">Contact us</a></li>
+            </ul>
+            <div class="nav-btn">
+                <button class="ghost-button">Log in </button>
+                <button class="ghost-button">Sign up </button>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="course-wrapper">
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search product name here.." />
+            <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+            <button class="button-value" onclick="filterProduct('all')">All</button>
+            <button class="button-value" onclick="filterProduct('Topwear')">
+                Topwear
+            </button>
+            <button class="button-value" onclick="filterProduct('Bottomwear')">
+                Bottomwear
+            </button>
+            <button class="button-value" onclick="filterProduct('Jacket')">
+                Jacket
+            </button>
+            <button class="button-value" onclick="filterProduct('Watch')">
+                Watch
+            </button>
+            <button class="button-value" onclick="filterProduct('python')">
+                Python
+            </button>
+        </div>
+        <div id="products"></div>
+    </div>
+    <!-- Script -->
+    <script src="../static/script.js"></script>
+
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="inner-footer">
+
+                <!--  for company name and description -->
+                <div class="footer-items">
+                    <h1>GURUKUL</h1>
+                    <p>Start Learing and Embrace New Skill for Better Future!</p>
+                </div>
+
+                <!--  for quick links  -->
+                <div class="footer-items">
+                    <h3>Quick Links</h3>
+                    <div class="border1"></div> <!--for the underline -->
+                    <ul>
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="#">
+                            <li>Courses</li>
+                        </a>
+                        <a href="#">
+                            <li>Community</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <!--  for some other links -->
+                <div class="footer-items">
+                    <h3>Login </h3>
+                    <div class="border1"></div> <!--for the underline -->
+                    <ul>
+                        <a href="#">
+                            <li>Log In</li>
+                        </a>
+                        <a href="#">
+                            <li>Sign up</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <!--  for contact us info -->
+                <div class="footer-items">
+                    <h3>Contact us</h3>
+                    <div class="border1"></div>
+                    <ul>
+                        <li><a href=""><ion-icon name="location-outline" class="icon"></ion-icon>Pune, Maharashtra</a>
+                        </li>
+                        <li><a href=""><ion-icon name="call-outline" class="icon"></ion-icon> +91 1234567809</a></li>
+                        <li><a href=""><ion-icon name="mail-outline" class="icon"></ion-icon>seme5projext@gmail.com</a>
+                        </li>
+                    </ul>
+
+                    <!--   for social links -->
+                    <div class="social-media">
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--   Footer Bottom start  -->
+            <div class="footer-bottom">
+                Copyright &copy; Gurukul- The E-Learing platform 2024.
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

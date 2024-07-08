@@ -45,7 +45,7 @@ button:hover {
 
 header {
   min-height: 10vh;
-  background-color: #77ecf6;
+  background-color: rgba(38, 199, 213, 0.6);
   position: sticky;
   top: 0;
   z-index: 99;
@@ -104,10 +104,11 @@ p {
   padding: .5em .75em;
   text-transform: uppercase;
 
-  font-family: "Merienda", cursive;
+  /* font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   font-weight: bold;
-  font-style: normal;
+  font-style: normal; */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-menu-link:hover {
@@ -327,6 +328,9 @@ p {
 @media only screen and (max-width: 425px){
   .title{
     font-size: 2.3rem;
+  }
+  #map{
+    width: 300px;
   }
 }
 
