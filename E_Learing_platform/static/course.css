@@ -6,6 +6,16 @@
     outline: none;
     font-family: "Poppins", sans-serif;
   }
+  ::-webkit-scrollbar{
+    background-color: rgba(1, 2, 68, 0.08);
+    border-radius: 50px;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: rgba(25, 175, 175, 0.291);
+    border: 1px solid aqua;
+    border-radius: 10px;
+  }
   body {
     background-color: #f5f8ff;
   }
@@ -15,6 +25,9 @@
   }
   #search-container {
     margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   #search-container input {
     background-color: transparent;
@@ -26,20 +39,36 @@
     border-bottom-color: #6759ff;
   }
   #search-container button {
-    padding: 1em 2em;
+    height: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em 2em;
     margin-left: 1em;
     background-color: #6759ff;
     color: #ffffff;
     border-radius: 5px;
     margin-top: 0.5em;
   }
+  #buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .button-value {
     border: 2px solid #6759ff;
+    height: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1em 2.2em;
     border-radius: 3em;
     background-color: transparent;
     color: #6759ff;
     cursor: pointer;
+    margin: 10px 5px;
   }
   .active {
     background-color: #6759ff;
