@@ -1,58 +1,58 @@
 let products = {
     data: [
       {
-        productName: "Regular White T-Shirt",
-        category: "Topwear",
-        price: "30",
-        image: "white-tshirt.jpg",
+        productName: "IOT Internet of Things",
+        category: "Theory",
+        price: "FREE",
+        image: "iot-logo.jpg",
       },
       {
-        productName: "Beige Short Skirt",
-        category: "Bottomwear",
-        price: "49",
-        image: "short-skirt.jpg",
+        productName: "Data Structure and Algorithms",
+        category: "Theory",
+        price: "FREE",
+        image: "dsa-log.jpg",
       },
       {
-        productName: "Sporty SmartWatch",
-        category: "Watch",
-        price: "99",
-        image: "sporty-smartwatch.jpg",
+        productName: "operating system",
+        category: "Theory",
+        price: "FREE",
+        image: "oparating-system-logo.jpg",
       },
       {
-        productName: "Basic Knitted Top",
-        category: "Topwear",
-        price: "29",
-        image: "knitted-top.jpg",
+        productName: "cyber security",
+        category: "Theory",
+        price: "FREE",
+        image: "cyber-security-logo.jpg",
       },
       {
-        productName: "Black Leather Jacket",
-        category: "Jacket",
-        price: "129",
-        image: "black-leather-jacket.jpg",
+        productName: "machin learning",
+        category: "Pratical",
+        price: "FREE",
+        image: "machine-learning-logo.jpg",
       },
       {
-        productName: "Stylish Pink Trousers",
-        category: "Bottomwear",
-        price: "89",
-        image: "pink-trousers.jpg",
+        productName: "c++",
+        category: "Pratical",
+        price: "FREE",
+        image: "c-logo.jpg",
       },
       {
-        productName: "Brown Men's Jacket",
-        category: "Jacket",
-        price: "189",
-        image: "brown-jacket.jpg",
+        productName: "web developement ",
+        category: "Pratical",
+        price: "FREE",
+        image: "web-developement-logo.jpg",
       },
       {
-        productName: "Comfy Gray Pants",
-        category: "Bottomwear",
-        price: "49",
-        image: "comfy-gray-pants.jpg",
+        productName: "java programming",
+        category: "Pratical",
+        price: "FREE",
+        image: "java-logo.jpg",
       },
       {
-        productName: "ANIKET",
-        category: "python",
-        price: "49",
-        image: "comfy-gray-pants.jpg",
+        productName: "python programming",
+        category: "Pratical",
+        price: "FREE",
+        image: "python-logo.jpg",
         info: "aniket anil chandiwade"
       },
     ],
@@ -81,7 +81,7 @@ let products = {
     container.appendChild(name);
     //price
     let price = document.createElement("h6");
-    price.innerText = "$" + i.price;
+    price.innerText =  i.price;
     container.appendChild(price);
   
     card.appendChild(container);
