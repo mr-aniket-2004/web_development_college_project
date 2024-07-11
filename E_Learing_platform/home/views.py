@@ -6,3 +6,15 @@ def index(request):
 
 def course(request):
     return render(request, "course.html")
+
+def python(request):
+    context ={
+        "var":"Aniket Chandiwade"
+    }
+    return render(request, "python.html",context)
+
+def java(request):
+    context ={
+        "var":"this is java"
+    }
+    return render(request, "python.html",context)

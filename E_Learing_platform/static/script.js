@@ -6,7 +6,7 @@ let products = {
         price: "FREE",
         image: "../static/iot-logo.jpg",
         info:"Duration : 12 Week ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification"
       },
       {
         productName: "Data Structure and Algorithms",
@@ -14,7 +14,7 @@ let products = {
         price: "FREE",
         image: "../static/dsa-log.jpg",
         info:"Duration : 16 Week ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification"
       },
       {
         productName: "operating system",
@@ -22,7 +22,7 @@ let products = {
         price: "FREE",
         image: "../static/oparating-system-logo.jpg",
         info:"Duration : 8 Week ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification"
       },
       {
         productName: "cyber security",
@@ -30,7 +30,7 @@ let products = {
         price: "FREE",
         image: "../static/cyber-security-logo.jpg",
         info:"Duration : 8 Week ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification"
       },
       {
         productName: "machin learning",
@@ -38,7 +38,7 @@ let products = {
         price: "FREE",
         image: "../static/machine-learning-logo.jpg",
         info:"Duration :  6 Month ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification"
       },
       {
         productName: "c++",
@@ -46,7 +46,7 @@ let products = {
         price: "FREE",
         image: "../static/c-logo.jpg",
         info:"Duration : 12 Week ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification"
       },
       {
         productName: "web developement ",
@@ -54,7 +54,7 @@ let products = {
         price: "FREE",
         image: "../static/web-developement-logo.jpg",
         info:"Duration : 6 Month ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification"
       },
       {
         productName: "java programming",
@@ -62,7 +62,8 @@ let products = {
         price: "FREE",
         image: "../static/java-logo.jpg",
         info:"Duration : 6 Month ",
-        info1: "Complition Certification"
+        info1: " Get Complition Certification",
+        button: "/java",
       },
       {
         productName: "python programming",
@@ -70,8 +71,8 @@ let products = {
         price: "FREE",
         image: "../static/python-logo.jpg",
         info: "Duration : 6 month ",
-        info1: "Complition Certification ",
-        button: "../static/java-logo.jpg",
+        info1: " Get Complition Certification ",
+        button: "/python",
       },
     ],
   };
