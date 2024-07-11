@@ -5,55 +5,73 @@ let products = {
         category: "Theory",
         price: "FREE",
         image: "../static/iot-logo.jpg",
+        info:"Duration : 12 Week ",
+        info1: "Complition Certification"
       },
       {
         productName: "Data Structure and Algorithms",
         category: "Theory",
         price: "FREE",
         image: "../static/dsa-log.jpg",
+        info:"Duration : 16 Week ",
+        info1: "Complition Certification"
       },
       {
         productName: "operating system",
         category: "Theory",
         price: "FREE",
         image: "../static/oparating-system-logo.jpg",
+        info:"Duration : 8 Week ",
+        info1: "Complition Certification"
       },
       {
         productName: "cyber security",
         category: "Theory",
         price: "FREE",
         image: "../static/cyber-security-logo.jpg",
+        info:"Duration : 8 Week ",
+        info1: "Complition Certification"
       },
       {
         productName: "machin learning",
         category: "Pratical",
         price: "FREE",
         image: "../static/machine-learning-logo.jpg",
+        info:"Duration :  6 Month ",
+        info1: "Complition Certification"
       },
       {
         productName: "c++",
         category: "Pratical",
         price: "FREE",
         image: "../static/c-logo.jpg",
+        info:"Duration : 12 Week ",
+        info1: "Complition Certification"
       },
       {
         productName: "web developement ",
         category: "Pratical",
         price: "FREE",
         image: "../static/web-developement-logo.jpg",
+        info:"Duration : 6 Month ",
+        info1: "Complition Certification"
       },
       {
         productName: "java programming",
         category: "Pratical",
         price: "FREE",
         image: "../static/java-logo.jpg",
+        info:"Duration : 6 Month ",
+        info1: "Complition Certification"
       },
       {
         productName: "python programming",
         category: "Pratical",
         price: "FREE",
         image: "../static/python-logo.jpg",
-        info: "aniket anil chandiwade"
+        info: "Duration : 6 month ",
+        info1: "Complition Certification ",
+        button: "../static/java-logo.jpg",
       },
     ],
   };
@@ -90,6 +108,16 @@ let products = {
     let info = document.createElement("p");
     info.innerText= ""+i.info;
     container.appendChild(info);
+    //create info tag 
+    let info1 = document.createElement("p");
+    info1.innerText= ""+i.info1;
+    container.appendChild(info1);
+    // let a= document.createElement("a");
+    // create abutton 
+    let button =document.createElement("a");
+    button.setAttribute("href",i.button)
+    button.innerText="Enroll Now";
+    container.appendChild(button);
   }
   
   //parameter passed from button (Parameter same as category)
