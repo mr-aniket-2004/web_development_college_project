@@ -7,6 +7,15 @@ def index(request):
 def course(request):
     return render(request, "course.html")
 
+def community(request):
+    return render(request, "community.html")
+
+def contactus(request):
+    return render(request, "contact-us.html")
+
+def log(request):
+    return render(request, "log-sign.html")
+
 def python(request):
     context ={
         "var":"Aniket Chandiwade"

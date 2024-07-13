@@ -135,8 +135,11 @@ p {
 
 .ghost-button:hover {
   background: var(--gray-color);
-  color: var(--light-color);
+  color: white;
   transform: scale(1.1);
+}
+.ghost-button a:hover{
+  color: white;
 }
 
 
