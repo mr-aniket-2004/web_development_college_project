@@ -33,7 +33,7 @@ let products = {
         info1: " Get Complition Certification"
       },
       {
-        productName: "machin learning",
+        productName: "machine learning",
         category: "Pratical",
         price: "FREE",
         image: "../static/machine-learning-logo.jpg",
