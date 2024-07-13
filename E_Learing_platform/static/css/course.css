@@ -148,8 +148,8 @@ img {
 
 .container>a:hover{
   transform: scale(1.1);
-  background-color: aqua;
-  color: white;
+  background-color: rgba(13, 240, 240, 0.354);
+  color:black;
 }
 
 .container>p{
