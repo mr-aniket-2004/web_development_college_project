@@ -269,7 +269,7 @@ p {
 
 .btn button {
   border: 1px solid white;
-  color:white;
+  color:orange;
   padding: 5px;
   height: 30px;
   width: 150px;
@@ -277,6 +277,9 @@ p {
   background-color: transparent;
 }
 .btn button a{
+  color:orange;
+}
+.btn button a:hover{
   color:orange;
 }
 
