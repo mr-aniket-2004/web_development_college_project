@@ -203,7 +203,7 @@
     background-color: #fff;
 }
 .slide-container{
-    max-width: 1320px;
+    max-width: 1120px;
     width: 100%;
     padding: 40px 0;
     
@@ -332,3 +332,126 @@
 
 /* student reviews css  */
 
+.student-feedback{
+  max-width: 100%;
+  min-height: 80vh;
+  margin: auto auto;
+  background-color: #1f1f22f4;
+  color: white;
+  
+}
+.student-tile{
+  /* text-align: center; */
+  margin: 20px 50px;
+  font-size: 2rem;
+}
+.s-row{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.s-card{
+  max-width: 600px;
+  border-radius: 23px;
+}
+.s-content{
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.402);
+  border-radius: 23px;  
+  padding-bottom: 20px;
+}
+.f-line{
+  display: flex;
+  justify-content: left;
+  padding: 10px 20px;
+}
+.f-line h3{
+  margin-left: 20px;
+}
+.s-icon{
+  color: white;
+  font-size: 2rem;
+}
+.s-line{
+  margin-left: 20px;
+  color: white;
+}
+.star-icon{
+  margin-left: 20px;
+  color: yellow;
+}
+.s-id{
+  margin: 20px 10px;
+  display: flex;
+}
+.s-profile{
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s-profile img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.s-info{
+  margin-left: 15px;
+  color: white;
+}
+.s-info>p{
+  color: white;
+}
+
+
+@media screen and (max-width:1250px) {
+  .s-card{
+    max-width: 500px;
+    border-radius: 23px;
+  }
+}
+@media screen and (max-width:1100px) {
+  .s-card{
+    max-width: 450px;
+    border-radius: 23px;
+  }
+}
+@media screen and (max-width:950px) {
+  .s-card{
+    max-width: 400px;
+    border-radius: 23px;
+  }
+}
+@media screen and (max-width:850px) {
+  .s-card{
+    max-width: 350px;
+    border-radius: 23px;
+  }
+}
+@media screen and (max-width:750px) {
+  .s-row{
+    max-width: 100%;
+    padding: 20px;
+    display: block;
+  }
+  .s-card{
+    max-width: 600px;
+    border-radius: 23px;
+    margin: 50px 60px;
+  }
+}
+@media screen and (max-width:450px) {
+  .s-row{
+    max-width: 100%;
+    padding: 20px;
+    display: block;
+  }
+  .s-card{
+    max-width: 600px;
+    border-radius: 23px;
+    margin: 10px 20px;
+  }
+}
