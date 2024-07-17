@@ -7,10 +7,10 @@ urlpatterns = [
     path("home/",views.index, name="home"),
     path("about/",views.course, name= "about"),
     path("community/",views.community, name= "community"),
-    path("contact-us/",views.contactus, name= "contatc-us"),
+    path("contact-us/",views.contactus, name= "contatcus"),
     path("log/",views.log, name= "log"),
-    path("home/contact-us/",views.contactus, name="contact-us"),
-    path("home/community/",views.community, name="community"),
+    # path("home/contact-us/",views.contactus, name="contact-us"),
+    # path("home/community/",views.community, name="community"),
     path("python/",views.python,name="python"),
     path("java/",views.java,name="java")
 ]

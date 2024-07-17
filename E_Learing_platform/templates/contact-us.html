@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" href="../static/css/contact-us.css">
 </head>
+
 <body>
     <header>
         <nav class="header-nav container flex-container">
@@ -27,118 +29,136 @@
     <div class="contact-us">
         <div class="main-logo">
             <img src="../static/contect-us.jpg" alt="">
-       
+
         </div>
         <div class="contactus-form">
             <div class="c-container">
                 <h2>Contact Us</h2>
-                <div class="row100">
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required>
-                            <span class="text">First Name</span>
-                            <span class="line"></span>
+                <form action="/contact-us" method="post">
+                    {% csrf_token %}
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" name="fname" required>
+                                <span class="text">First Name</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" name="sname" required>
+                                <span class="text">Last Name</span>
+                                <span class="line"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required>
-                            <span class="text">Last Name</span>
-                            <span class="line"></span>
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" name="email" required>
+                                <span class="text">Email</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" name="phoneno" required>
+                                <span class="text">Phone Number</span>
+                                <span class="line"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row100">
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required>
-                            <span class="text">Email</span>
-                            <span class="line"></span>
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox textarea">
+                                <textarea name="desc" id="" required></textarea>
+                                <span class="text">Type Your Message Here...</span>
+                                <span class="line"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required>
-                            <span class="text">Phone Number</span>
-                            <span class="line"></span>
+
+                    <div class="row100">
+                        <div class="col">
+                            <input type="submit" value="Send">
                         </div>
                     </div>
-                </div>
-                <div class="row100">
-                    <div class="col">
-                        <div class="inputBox textarea">
-                            <textarea name="" id="" required></textarea>
-                            <span class="text">Type Your Message Here...</span>
-                            <span class="line"></span>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="row100">
-                    <div class="col">
-                        <input type="submit" value="Send">
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
     <footer>
         <div class="footer">
             <div class="inner-footer">
-          
-          <!--  for company name and description -->
-              <div class="footer-items">
-                <h1>GURUKUL</h1>
-                <p>Start Learing and Embrace New Skill for Better Future!</p>
-              </div>
-          
-          <!--  for quick links  -->
-              <div class="footer-items">
-                <h3>Quick Links</h3>
-                <div class="border1"></div> <!--for the underline -->
-                  <ul>
-                    <a href="/home"><li>Home</li></a>
-                    <a href="/about"><li>Courses</li></a>
-                    <a href="/community"><li>Community</li></a>
-                    <a href="#"><li>Contact Us</li></a>
-                  </ul>
-              </div>
-          
-          <!--  for some other links -->
-              <div class="footer-items">
-                <h3>Login </h3>
-                <div class="border1"></div>  <!--for the underline -->
-                  <ul>
-                    <a href="/log"><li>Log In</li></a>
-                    <a href="/log"><li>Sign up</li></a>
-                  </ul>
-              </div>
-          
-          <!--  for contact us info -->
-              <div class="footer-items">
-                <h3>Contact us</h3>
-                <div class="border1"></div>
-                  <ul>
-                    <li><a href=""><ion-icon name="location-outline" class="icon"></ion-icon>Pune, Maharashtra</a></li>
-                    <li><a href=""><ion-icon name="call-outline" class="icon"></ion-icon> +91 1234567809</a></li>
-                    <li><a href=""><ion-icon name="mail-outline" class="icon"></ion-icon>seme5projext@gmail.com</a></li>
-                  </ul> 
-                
-          <!--   for social links -->
-                  <div class="social-media">
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-                  </div> 
-              </div>
+
+                <!--  for company name and description -->
+                <div class="footer-items">
+                    <h1>GURUKUL</h1>
+                    <p>Start Learing and Embrace New Skill for Better Future!</p>
+                </div>
+
+                <!--  for quick links  -->
+                <div class="footer-items">
+                    <h3>Quick Links</h3>
+                    <div class="border1"></div> <!--for the underline -->
+                    <ul>
+                        <a href="/home">
+                            <li>Home</li>
+                        </a>
+                        <a href="/about">
+                            <li>Courses</li>
+                        </a>
+                        <a href="/community">
+                            <li>Community</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <!--  for some other links -->
+                <div class="footer-items">
+                    <h3>Login </h3>
+                    <div class="border1"></div> <!--for the underline -->
+                    <ul>
+                        <a href="/log">
+                            <li>Log In</li>
+                        </a>
+                        <a href="/log">
+                            <li>Sign up</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <!--  for contact us info -->
+                <div class="footer-items">
+                    <h3>Contact us</h3>
+                    <div class="border1"></div>
+                    <ul>
+                        <li><a href=""><ion-icon name="location-outline" class="icon"></ion-icon>Pune, Maharashtra</a>
+                        </li>
+                        <li><a href=""><ion-icon name="call-outline" class="icon"></ion-icon> +91 1234567809</a></li>
+                        <li><a href=""><ion-icon name="mail-outline" class="icon"></ion-icon>seme5projext@gmail.com</a>
+                        </li>
+                    </ul>
+
+                    <!--   for social links -->
+                    <div class="social-media">
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                    </div>
+                </div>
             </div>
-            
-          <!--   Footer Bottom start  -->
+
+            <!--   Footer Bottom start  -->
             <div class="footer-bottom">
-              Copyright &copy; Gurukul- The E-Learing platform 2024.
+                Copyright &copy; Gurukul- The E-Learing platform 2024.
             </div>
-          </div>
-            
+        </div>
+
     </footer>
 </body>
+
 </html>
