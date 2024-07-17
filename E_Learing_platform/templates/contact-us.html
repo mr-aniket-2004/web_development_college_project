@@ -25,6 +25,8 @@
             </div>
         </nav>
     </header>
+   
+
 
     <div class="contact-us">
         <div class="main-logo">
@@ -32,9 +34,15 @@
 
         </div>
         <div class="contactus-form">
+            
             <div class="c-container">
                 <h2>Contact Us</h2>
-                <form action="/contact-us" method="post">
+                {% if messages %}
+            {% for message in messages %}
+            <p class="mess {{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+            {% endif %}
+                <form action="{% url "contact-us" %}" method="post">
                     {% csrf_token %}
                     <div class="row100">
                         <div class="col">
