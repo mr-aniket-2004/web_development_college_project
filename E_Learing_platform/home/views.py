@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import *
 from datetime import datetime
 from home.models import Contact
 from django.contrib import messages
+
 
 # Create your views here.
 def index(request):
@@ -23,7 +24,10 @@ def contactus(request):
         contact = Contact(fname=fname,sname=sname,email=email,phoneno=phoneno,desc=desc,date=datetime.today())
         contact.save()
         messages.success(request, "Your form submit sucessfully!")
+    # return redirect('contact-us')
     return render(request, "contact-us.html")
+
+
 
 def log(request):
     return render(request, "log-sign.html")
