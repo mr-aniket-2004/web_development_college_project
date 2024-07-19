@@ -1,4 +1,4 @@
-from django.shortcuts import *
+from django.shortcuts import render
 from datetime import datetime
 from home.models import Contact ,Sign
 from django.contrib import messages
