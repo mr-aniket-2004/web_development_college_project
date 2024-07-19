@@ -30,7 +30,7 @@ def contactus(request):
 
 
 def log(request):
-    if request == "POST":
+    if request.method == "POST":
         fname = request.POST.get('fname')
         email = request.POST.get('email')
         password = request.POST.get('password')
