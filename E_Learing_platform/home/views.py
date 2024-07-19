@@ -1,6 +1,6 @@
 from django.shortcuts import *
 from datetime import datetime
-from home.models import Contact
+from home.models import Contact ,Sign
 from django.contrib import messages
 
 
@@ -30,6 +30,12 @@ def contactus(request):
 
 
 def log(request):
+    if request == "POST":
+        fname = request.POST.get('fname')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        login =  Sign(fname=fname,email=email,password=password,date=datetime.today())
+        login.save()
     return render(request, "log-sign.html")
 
 def python(request):

@@ -10,3 +10,13 @@ class Contact(models.Model):
     date=models.DateField()
     def __str__(self):
         return self.fname
+
+
+class Sign(models.Model):
+    fname=models.CharField(max_length=120)
+    email= models.EmailField(max_length=120)
+    password = models.CharField(max_length=50)
+    date =models.DateField()
+    def __str__(self):
+        return self.fname
+    

@@ -4,7 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: "Montserrat", sans-serif;
+
 }
 
 .main {
@@ -205,19 +207,21 @@
 .slide-container{
     max-width: 1120px;
     width: 100%;
-    padding: 40px 0;
+    padding: 40px 50px;
     
   }
   .slide-content{
     margin: 0 40px;
     overflow: hidden;
     border-radius: 25px;
+    height: 450px;
   }
   .card{
     border: 1px solid black;
     border-radius: 25px;
     background-color: #FFF;
     box-shadow: 0 0 15px rgba(46, 211, 236, 0.839);
+   
   }
   .image-content,
   .card-content{
@@ -343,6 +347,7 @@
 .student-tile{
   /* text-align: center; */
   margin: 20px 50px;
+  padding-top: 30px;
   font-size: 2rem;
 }
 .s-row{
