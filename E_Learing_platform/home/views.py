@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect , HttpResponse
 from datetime import datetime
 from home.models import Contact ,Sign
 from django.contrib import messages
-
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 def index(request):
@@ -36,6 +36,19 @@ def log(request):
         password = request.POST.get('password')
         login =  Sign(fname=fname,email=email,password=password,date=datetime.today())
         login.save()
+
+    return render(request, "log-sign.html")
+
+def log(request):
+    if request.method == "POST":
+        username =request.POST.get('username')
+        pass1 = request.POST.get('pass1')
+        user =authenticate(request,email=username,password=pass1)
+        if user is not None:
+            login(request,user)
+            return redirect('home')
+        else:
+            return HttpResponse("wrong input")
     return render(request, "log-sign.html")
 
 def python(request):
