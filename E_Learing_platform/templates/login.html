@@ -21,8 +21,8 @@
                 <li><a class="header-menu-link" href="/contact-us">Contact us</a></li>
             </ul>
             <div class="nav-btn">
-                <button class="ghost-button"><a href="log/"> Log in</a> </button>
-                <button class="ghost-button"><a href="log/"> Sign UP</a> </button>
+                <button class="ghost-button"><a href="/log"> Log in</a> </button>
+                <button class="ghost-button"><a href="/sign"> Sign UP</a> </button>
             </div>
         </nav>
     </header>
@@ -30,7 +30,7 @@
         <div class="singup-box">
             <div class="singup-card">
                 <div class="card-right">
-                    <form method="post" action="{% url " log" %}">
+                    <form method="post" action="/log">
                         {% csrf_token %}
                         <h1>Log In </h1>
                         <div class="social-icons">
@@ -52,7 +52,7 @@
                             Welcome Back!
                         </h2>
                         <p>Enter your personal details to use all of site features</p>
-                        <button><a href="">Log In </a></button>
+                        <button><a href="/sign"> Sign Up </a></button>
                     </div>
                 </div>
             </div>

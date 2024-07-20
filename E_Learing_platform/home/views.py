@@ -30,26 +30,31 @@ def contactus(request):
 
 
 def log(request):
+    username=Sign.email
+    pass1=Sign.password
+    if request.method == "POST":
+        email=request.POST.get('email')
+        password = request.POST.get('password')
+        user =authenticate(request,email==username,password==pass1)
+        if user is not None:
+            return redirect('home')
+        else:
+            return HttpResponse("user not found")
+    return render(request, "login.html")
+
+def sign(request):
     if request.method == "POST":
         fname = request.POST.get('fname')
         email = request.POST.get('email')
         password = request.POST.get('password')
-        login =  Sign(fname=fname,email=email,password=password,date=datetime.today())
-        login.save()
-
-    return render(request, "log-sign.html")
-
-def log(request):
-    if request.method == "POST":
-        username =request.POST.get('username')
-        pass1 = request.POST.get('pass1')
-        user =authenticate(request,email=username,password=pass1)
-        if user is not None:
-            login(request,user)
-            return redirect('home')
+        password1 = request.POST.get('password1')
+        if password == password1:
+            main = Sign(fname=fname,email=email,password=password,password1=password1,date=datetime.today())
+            main.save()
+            return redirect('log')
         else:
-            return HttpResponse("wrong input")
-    return render(request, "log-sign.html")
+            return HttpResponse("password and confirm not same")
+    return render(request, "singup.html")   
 
 def python(request):
     context ={

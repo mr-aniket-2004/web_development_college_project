@@ -9,6 +9,7 @@ urlpatterns = [
     path("community",views.community, name= "community"),
     path("contact-us",views.contactus, name= "contact-us"),
     path("log",views.log, name= "log"),
+    path("sign",views.sign, name= "sign"),
     path("python",views.python,name="python"),
     path("java",views.java,name="java")
 ]
