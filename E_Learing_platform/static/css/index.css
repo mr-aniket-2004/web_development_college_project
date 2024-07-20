@@ -118,7 +118,7 @@ p {
   text-decoration: underline;
 }
 .nav-btn>.ghost-button{
-  min-width: 15em;
+  min-width: 10em;
 }
 .ghost-button {
   border: .125em solid var(--gray-color);
