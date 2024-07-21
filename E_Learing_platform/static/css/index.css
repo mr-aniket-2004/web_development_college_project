@@ -47,6 +47,7 @@ header {
   min-height: 10vh;
   /* background-color: rgba(70, 218, 185, 0.6); */
   background-color: white;
+  /* background-color: black; */
   position: sticky;
   top: 0;
   z-index: 99;
@@ -82,7 +83,7 @@ p {
   font-weight: 600;
   letter-spacing: .125em;
   text-transform: uppercase;
-  
+
 }
 
 .header-nav {
@@ -117,9 +118,11 @@ p {
   color: red;
   text-decoration: underline;
 }
-.nav-btn>.ghost-button{
+
+.nav-btn>.ghost-button {
   min-width: 10em;
 }
+
 .ghost-button {
   border: .125em solid var(--gray-color);
   min-width: 9em;
@@ -130,7 +133,7 @@ p {
   border: 2px solid var(--gray-color);
   /* color: white; */
   font-size: medium;
-  font-weight:900;
+  font-weight: 900;
   background-color: rgba(255, 255, 255, 0.943);
 }
 
@@ -139,7 +142,8 @@ p {
   color: white;
   transform: scale(1.1);
 }
-.ghost-button a:hover{
+
+.ghost-button a:hover {
   color: white;
 }
 
@@ -164,8 +168,13 @@ p {
   .header-nav {
     flex-direction: row;
     justify-content: space-between;
+    padding: 10px 20px;
   }
-
+  .logo .logo-link img{
+    height: 100px;
+    width: 100px;
+    background-blend-mode: color-burn;
+  }
   .header-menu-link {
     padding: 0 1.5em;
   }
@@ -207,10 +216,13 @@ p {
   }
 }
 
+
+
 /* main body css */
 
 .main-container {
-  background-color: #0e1350;
+  /* background-color: #0e1350; */
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,10 +240,10 @@ p {
 }
 
 .main-contain {
-  width:45%;
+  width: 45%;
   margin-right: 50px;
   padding: 10px;
- 
+
 }
 
 .main-contain p {
@@ -270,18 +282,20 @@ p {
 
 .btn button {
   border: 1px solid white;
-  color:orange;
+  color: orange;
   padding: 5px;
   height: 30px;
   width: 150px;
   margin: 20px;
   background-color: transparent;
 }
-.btn button a{
-  color:orange;
+
+.btn button a {
+  color: orange;
 }
-.btn button a:hover{
-  color:orange;
+
+.btn button a:hover {
+  color: orange;
 }
 
 .btn button:hover {
@@ -296,7 +310,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1250px) and (min-width:1000px){
+@media only screen and (max-width: 1250px) and (min-width:1000px) {
   .main-contain {
     width: 40%;
   }
@@ -318,6 +332,7 @@ p {
   .title {
     font-size: 2.5rem;
   }
+
   .main-img img {
     background-color: transparent;
     height: 100%;
@@ -327,34 +342,43 @@ p {
 }
 
 @media only screen and (max-width: 770px) {
-  .main-container{
+  .main-container {
     display: block;
     min-width: 100%;
-    
+
   }
-  .main-img{
+
+  .main-img {
     text-align: center;
   }
-  .main-img img{
+
+  .main-img img {
     width: 90%;
-    height: 90% ;
+    height: 90%;
   }
-  .main-contain{
+
+  .main-contain {
     width: 100%;
     justify-content: center;
     text-align: center;
   }
 }
 
-@media only screen and (max-width: 425px){
-  .title{
+@media only screen and (max-width: 425px) {
+  .title {
     font-size: 2.3rem;
   }
-  #map{
+
+  #map {
     width: 300px;
   }
 }
-
+@media only screen and (max-width: 380px)and (min-width:330px) {
+  .nav-btn{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 
 /* feedback css */
 
@@ -362,124 +386,227 @@ p {
 
 /* FOOTER */
 .footer {
-	width: 100%;
-	background: #00121b;
-	display: block;
- }
+  width: 100%;
+  background: #00121b;
+  display: block;
+}
 
- .inner-footer {
-	 width: 95%;
-	 margin: auto;
-	 padding: 30px 10px;
-	 display: flex;
-	 flex-wrap: wrap;
-	 box-sizing: border-box;
-	 justify-content: center;
- }
+.inner-footer {
+  width: 95%;
+  margin: auto;
+  padding: 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+}
 
 .footer-items {
-	width: 25%;
-	padding: 10px 20px;
-	box-sizing: border-box;
-	color: #fff;
+  width: 25%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #fff;
 }
 
 .footer-items p {
-	font-size: 16px;
-	text-align: justify;
-	line-height: 25px;
-	color: #fff;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 25px;
+  color: #fff;
 }
 
 .footer-items h1 {
-	color: #fff;
+  color: #fff;
 }
 
 .border1 {
-	height: 3px;
-	width: 40px;
-	background: #ff9800;
-	color: #ff9800;
-	background-color: #ff9800;
-	border: 0px;
+  height: 3px;
+  width: 40px;
+  background: #ff9800;
+  color: #ff9800;
+  background-color: #ff9800;
+  border: 0px;
 }
 
 ul {
-	list-style: none;
-	color: #fff;
-	font-size: 15px;
-	letter-spacing: 0.5px;	
- }
+  list-style: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
 
 ul a {
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-	transition: 0.3s;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  transition: 0.3s;
 }
 
 ul a:hover {
-	color: #ff9800;
+  color: #ff9800;
 }
-.icon{
+
+.icon {
   padding-right: 10px;
   font-size: 1.2rem;
 }
+
 ul li {
-	margin: 10px 0;
-	height: 25px;
+  margin: 10px 0;
+  height: 25px;
 }
 
 li i {
-	margin-right: 20px;
+  margin-right: 20px;
 }
 
 .social-media {
-	width: 100%;
-	color: #fff;
-	text-align: center;
-	font-size: 20px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
 }
 
 .social-media a {
-	text-decoration: none;
+  text-decoration: none;
   height: 25px;
-	width: 25px;
-	margin: 20px 10px;
-	padding: 4px;
-	color: #fff;
-	transition: 0.5s;
+  width: 25px;
+  margin: 20px 10px;
+  padding: 4px;
+  color: #fff;
+  transition: 0.5s;
 }
 
 .social-media a:hover {
-  color:orange;
-	transform: scale(1);
+  color: orange;
+  transform: scale(1);
 }
 
 .footer-bottom {
-	padding: 10px;
-	background: #00121b;
-	color: #fff;
-	font-size: 12px;
-	text-align: center;
+  padding: 10px;
+  background: #00121b;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
 }
 
 /* for tablet mode view */
 
 @media screen and (max-width: 1275px) {
-	.footer-items {
-		width: 50%;
-	}
+  .footer-items {
+    width: 50%;
+  }
 }
 
 /* for mobile screen view */
 
 @media screen and (max-width: 660px) {
-	.footer-items {
-		width: 100%;
-	}
+  .footer-items {
+    width: 100%;
+  }
 }
 
 /* you can toggle the media screen view accordingly by changing the (max-width: px) to your convenience */
 
 /* Thanks to Computer Conversations */
+
+
+/* FAQ css start here */
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  /* background-color: #0e1350; */
+  background-color: black;
+  padding-bottom: 50px;
+  /* border-top: 1px solid aqua; */
+}
+
+.faq-main {
+  margin: 0 20px;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.faq-main h1 {
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+}
+
+.faq-main .tab {
+  position: relative;
+  background-color: white;
+  padding: 0 15px 20px;
+  box-shadow: 0 15px 25px rgba(193, 236, 52, 0.4);
+  border-radius: 8px;
+}
+
+.faq-main .tab input {
+  appearance: none;
+}
+
+.faq-main .tab label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-main .tab label::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, .1);
+  transition: transform 1s;
+}
+
+.faq-main .tab:hover label::after {
+  color: black;
+}
+
+.faq-main .tab input:checked~label::after {
+  transform: rotate(135deg);
+}
+
+.faq-main .tab label h2 {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.25em;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.faq-main .tab label h3 {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  z-index: 10;
+}
+
+.faq-main .tab .faq-content {
+  max-height: 0;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.faq-main .tab .faq-content p {
+  padding: 0 10px 0 50px;
+}
+
+.faq-main .tab input:checked~.faq-content {
+  max-height: 100vh;
+}
+
+
+@media screen and (max-width: 660px) {}
