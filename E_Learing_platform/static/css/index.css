@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Merienda:wght@300..900&family=Permanent+Marker&family=Playwrite+DE+Grund:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Merienda:wght@300..900&family=Permanent+Marker&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap');
 
 :root {
   --dark-color: hsl(0, 0%, 0%);
@@ -53,13 +54,11 @@ header {
   z-index: 99;
 }
 
-img {
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 80%;
-  width: 100%;
+.logo .logo-link img {
+  height: 100px;
+  width: 100px;
+  background-blend-mode: color-burn;
 }
-
 p {
   color: var(--gray-color);
   font-size: .875em;
@@ -170,11 +169,13 @@ p {
     justify-content: space-between;
     padding: 10px 20px;
   }
-  .logo .logo-link img{
+
+  .logo .logo-link img {
     height: 100px;
     width: 100px;
     background-blend-mode: color-burn;
   }
+
   .header-menu-link {
     padding: 0 1.5em;
   }
@@ -373,8 +374,9 @@ p {
     width: 300px;
   }
 }
+
 @media only screen and (max-width: 380px)and (min-width:330px) {
-  .nav-btn{
+  .nav-btn {
     display: flex;
     justify-content: space-evenly;
   }
@@ -608,5 +610,66 @@ li i {
   max-height: 100vh;
 }
 
+/* key-point css start here  */
 
-@media screen and (max-width: 660px) {}
+.key-point {
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Playfair Display", serif;
+  /* border: 2px solid red; */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-height: 50vh;
+  /* max-width: 100%; */
+}
+
+.main-key {
+  min-height: 100%;
+  min-width: 100%;
+  color: white;
+  /* border: 2px solid yellow; */
+}
+
+.key-list {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.key-list li{
+  padding:  0 20px;
+  text-align: start;
+  border: 1px solid white;
+  box-shadow: 0 0px 15px rgba(255, 255, 255, 0.943);
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 18px;
+  background-color: rgba(96, 142, 250, 0.238);
+}
+.key-content h3 {
+  color: white;
+  margin: 30px 0px;
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+}
+.mpart{
+  display: flex;
+  align-items: center;
+}
+.mpart h2{
+  color: white;
+  font-size: 2rem;
+}
+.mpart i{
+  color: red;
+}
+.key-icone{
+  color: black;
+  font-size: 5rem;
+}
+.key-icone i{
+  color: white;
+}
