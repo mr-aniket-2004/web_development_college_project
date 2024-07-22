@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect , HttpResponse
 from datetime import datetime
-from home.models import Contact ,Sign
+from home.models import Contact ,Sign,log
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 
@@ -35,11 +35,10 @@ def log(request):
     if request.method == "POST":
         email=request.POST.get('email')
         password = request.POST.get('password')
-        user =authenticate(request,email==username,password==pass1)
-        if user is not None:
-            return redirect('home')
-        else:
-            return HttpResponse("user not found")
+        user= log(request, email=email,password=password)
+        user.save()
+        if (username==email) & (pass1==password):
+            print("hellow world")
     return render(request, "login.html")
 
 def sign(request):

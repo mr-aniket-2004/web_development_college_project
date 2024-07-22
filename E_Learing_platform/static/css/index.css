@@ -135,7 +135,13 @@ p {
   font-weight: 900;
   background-color: rgba(255, 255, 255, 0.943);
 }
-
+#sign{
+  background-color: #0e1350;
+  color: white;
+}
+#sign a{
+  color: white;
+}
 .ghost-button:hover {
   background: var(--gray-color);
   color: white;
@@ -222,8 +228,8 @@ p {
 /* main body css */
 
 .main-container {
-  /* background-color: #0e1350; */
-  background-color: black;
+  background-color: #0e1350;
+  /* background-color: black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -520,8 +526,8 @@ li i {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  /* background-color: #0e1350; */
-  background-color: black;
+  background-color: #0e1350;
+  /* background-color: black; */
   padding-bottom: 50px;
   /* border-top: 1px solid aqua; */
 }
@@ -616,7 +622,8 @@ li i {
   /* font-family: "Montserrat", sans-serif; */
   font-family: "Playfair Display", serif;
   /* border: 2px solid red; */
-  background-color: black;
+  /* background-color: black; */
+  background-color: #0e1350;
   display: flex;
   justify-content: center;
   text-align: center;

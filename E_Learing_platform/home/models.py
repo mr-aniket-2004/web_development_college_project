@@ -22,7 +22,6 @@ class Sign(models.Model):
         return self.fname
     
 class log(models.Model):
-    fk = models.ForeignKey(Sign,on_delete=models.CASCADE)
     email=models.EmailField(max_length=120)
     password =models.CharField(max_length=100)
     date =models.DateField()
