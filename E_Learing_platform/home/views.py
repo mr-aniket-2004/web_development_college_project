@@ -3,6 +3,7 @@ from datetime import datetime
 from home.models import Contact ,Sign,log
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 
 # Create your views here.
 def index(request):
@@ -29,31 +30,33 @@ def contactus(request):
 
 
 
-def log(request):
-    username=Sign.email
-    pass1=Sign.password
-    if request.method == "POST":
-        email=request.POST.get('email')
-        password = request.POST.get('password')
-        user= log(request, email=email,password=password)
-        user.save()
-        if (username==email) & (pass1==password):
-            print("hellow world")
-    return render(request, "login.html")
-
 def sign(request):
     if request.method == "POST":
-        fname = request.POST.get('fname')
+        username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
         password1 = request.POST.get('password1')
         if password == password1:
-            main = Sign(fname=fname,email=email,password=password,password1=password1,date=datetime.today())
-            main.save()
+            myuser = User.objects.create_user(username=username,email=email,password=password)
+            myuser.save()
             return redirect('log')
         else:
             return HttpResponse("password and confirm not same")
     return render(request, "singup.html")   
+
+
+def log(request):
+    if request.method == "POST":
+        username=request.POST.get('username')
+        password = request.POST.get('password')
+        key_user = authenticate(request,username=username,password=password)
+        if key_user is not None:
+            login(request,key_user)
+            return redirect('home')
+        else:
+            return HttpResponse("worng info")
+    return render(request, "login.html")
+
 
 def python(request):
     context ={
