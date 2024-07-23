@@ -715,11 +715,12 @@ li i {
 
 .feature-icon h2 {
   color: #0e1350;
+  font-family: "Merienda", cursive;
 }
 
 .feature-info {
   text-align: center;
-  max-width: 350px;
+  max-width: 4000px;
   min-height: 200px;
   /* background-color: aqua; */
   position: relative;
@@ -728,6 +729,8 @@ li i {
   color: red;
   font-weight: 600;
   font-size: 1.01rem;
+  font-family: "Merienda", cursive;
+  /* background-color: #3333333a; */
 }
 
 .temp1:hover .feature-info {
@@ -893,3 +896,6 @@ li i {
     margin: 10px 20px;
   }
 }
+
+
+
