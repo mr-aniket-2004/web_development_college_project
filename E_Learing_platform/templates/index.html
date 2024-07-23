@@ -25,7 +25,7 @@
       </div>
     </nav>
   </header>
-  <div class="main-container">
+  <div class="main-container reveal">
     <div class="main-img">
       <img src="../static/main1.png" alt="" />
     </div>
@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-  <div class="faq">
+  <div class="faq reveal">
     <div class="faq-main">
       <h1>Frequently Asked Questions?</h1>
 
@@ -120,7 +120,7 @@
   </div>
 
 
-  <div class="features">
+  <div class="features reveal">
     <div class="feature-container">
       <div class="temp">
         <h1>OUR FEATURES </h1>
@@ -235,7 +235,7 @@
     </div>
   </div> -->
 
-  <div class="student-feedback">
+  <div class="student-feedback reveal">
     <h2 class="student-tile">
       Happy Students...
     </h2>
@@ -360,7 +360,7 @@
     </div>
   </div>
 
-<div class="learing-partner">
+<div class="learing-partner reveal">
   <h1>OUR LEARNING PARTNER</h1>
   <div class="learning-container">
     <div class="inner-container">
@@ -384,7 +384,7 @@
 
 
   <footer>
-    <div class="footer">
+    <div class="footer reveal">
       <div class="inner-footer">
         <!--  for company name and description -->
         <div class="footer-items">
@@ -465,6 +465,24 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    window.addEventListener('scroll',reveal);
+    function reveal(){
+        var reveals= document.querySelectorAll('.reveal');
+        for(var i =0; i<reveals.length;i++){
+            var windowheight =window.innerHeight;
+            var revealtop= reveals[i].getBoundingClientRect().top;
+            var revealpoint =150;
+            
+            if(revealtop<windowheight-revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active')
+            }
+        }
+    }
+</script>
 </body>
 
 </html>
