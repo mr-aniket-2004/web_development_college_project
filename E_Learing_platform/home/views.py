@@ -1,9 +1,9 @@
 from django.shortcuts import render , redirect , HttpResponse
 from datetime import datetime
-from home.models import Contact ,Sign,log
+from home.models import Contact
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 # Create your views here.
 def index(request):
@@ -31,30 +31,30 @@ def contactus(request):
 
 
 def sign(request):
-    if request.method == "POST":
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        password1 = request.POST.get('password1')
-        if password == password1:
-            myuser = User.objects.create_user(username=username,email=email,password=password)
-            myuser.save()
-            return redirect('log')
-        else:
-            return HttpResponse("password and confirm not same")
+    # if request.method == "POST":
+    #     username = request.POST.get('username')
+    #     email = request.POST.get('email')
+    #     password = request.POST.get('password')
+    #     password1 = request.POST.get('password1')
+    #     if password == password1:
+    #         myuser = User.objects.create_user(username=username,email=email,password=password)
+    #         myuser.save()
+    #         return redirect('log')
+    #     else:
+            # return HttpResponse("password and confirm not same")
     return render(request, "singup.html")   
 
 
 def log(request):
-    if request.method == "POST":
-        username=request.POST.get('username')
-        password = request.POST.get('password')
-        key_user = authenticate(request,username=username,password=password)
-        if key_user is not None:
-            login(request,key_user)
-            return redirect('home')
-        else:
-            return HttpResponse("worng info")
+    # if request.method == "POST":
+    #     username=request.POST.get('username')
+    #     password = request.POST.get('password')
+    #     key_user = authenticate(request,username=username,password=password)
+    #     if key_user is not None:
+    #         login(request,key_user)
+    #         return redirect('home')
+    #     else:
+    #         return HttpResponse("worng info")
     return render(request, "login.html")
 
 
