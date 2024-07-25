@@ -13,7 +13,6 @@ class Contact(models.Model):
 
 class course(models.Model):
     product_name= models.CharField(max_length=200)
-    categroy =models.CharField(max_length=200)
     price =models.CharField(max_length=100)
     img =models.ImageField(upload_to='img')
     duration =models.CharField(max_length=120)

@@ -34,56 +34,41 @@
     <div class="course-wrapper">
         <div class="bg">
             <form method="get" action="">
-            <div id="search-container">
+                <div id="search-container">
                     <input type="search" name="put" placeholder="Search product name here.." />
                     <button id="search" type="submit">Search</button>
                 </div>
             </form>
-            <div id="buttons">
-                <button class="button-value" onclick="filterProduct('all')">All</button>
-                <!-- <button class="button-value" onclick="filterProduct('Topwear')">
-                Topwear
-            </button> -->
-                <button class="button-value" onclick="filterProduct('Pratical')">
-                    Pratical Base
-                </button>
-                <button class="button-value" onclick="filterProduct('Theory')">
-                    Theory Base
-                </button>
-                <!-- <button class="button-value" onclick="filterProduct('Watch')">
-                Watch
-            </button> -->
-                <!-- <button class="button-value" onclick="filterProduct('python')"> 
-            </button> -->
+    
+        </div>
+    </div>
+    <div id="products">
+        {% for cour in cour %}
+        <div class="card ">
+            <div class="imgContainer">
+                <img src="{{cour.img.url}}" alt="">
+            </div>
+            <div class="container">
+                <h5 class="product_name">{{cour.product_name}}</h5>
+                <h6 class=" price ">{{cour.price}}</h6>
+                <p class=" duration">{{cour.duration}}</p>
+                <p>{{cour.info}}</p>
+                <a href="{{cour.button}}">Enroll Now</a>
             </div>
         </div>
-        <div id="products">
-            {% for cour in cour %}
-            <div class="card ">
-                <div class="imgContainer">
-                    <img src="{{cour.img.url}}" alt="">
-                </div>
-                <div class="container">
-                    <h5 class="product_name">{{cour.product_name}}</h5>
-                    <h6 class=" price ">{{cour.price}}</h6>
-                    <p class=" duration">{{cour.duration}}</p>
-                    <p>{{cour.info}}</p>
-                    <a href="{{cour.button}}">Enroll Now</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+        {% endfor %}
+    </div>
     </div>
     <!-- Script -->
     <script>
         document.getElementById("search").addEventListener("click", () => {
-            let searchinput = document.getElementById("search-input"). value;
+            let searchinput = document.getElementById("search-input").value;
             let element = document.querySelectorAll(".product_name");
             let cards = document.querySelectorAll(".card");
-            element.forEach((element,index)=>{
-                if (element.innerHTML.icludes(searchinput.toUpperCase())){
+            element.forEach((element, index) => {
+                if (element.innerHTML.icludes(searchinput.toUpperCase())) {
                     cards[index].classList.remove("hide");
-                }else{
+                } else {
                     cards[index].classList.add("hide");
                 }
             });
