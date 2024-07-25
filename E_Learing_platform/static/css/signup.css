@@ -90,7 +90,14 @@ h1{
     cursor: pointer;
     height: 30px;
 }
-
+.role{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#role{
+    margin: 5px 10px;
+}
 .singup-card  button.hidden{
     background-color: transparent;
     border-color: #fff;
