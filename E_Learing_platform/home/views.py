@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect , HttpResponse
 from datetime import datetime
-from home.models import Contact
+from .models import Contact ,course
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 # from django.contrib.auth.models import User
@@ -9,8 +9,17 @@ from django.contrib.auth import authenticate, login
 def index(request):
     return render(request, "index.html")
 
-def course(request):
-    return render(request, "course.html")
+def course1(request):
+    if 'put' in request.GET:
+        put =request.GET['put']
+        cour =course.objects.filter(product_name__icontains=put)
+    else :
+            cour= course.objects.all()
+
+    context ={
+        'cour':cour
+    }
+    return render(request, "course.html",context)
 
 def community(request):
     return render(request, "community.html")

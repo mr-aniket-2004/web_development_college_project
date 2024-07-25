@@ -11,6 +11,16 @@ class Contact(models.Model):
     def __str__(self):
         return self.fname
 
+class course(models.Model):
+    product_name= models.CharField(max_length=200)
+    categroy =models.CharField(max_length=200)
+    price =models.CharField(max_length=100)
+    img =models.ImageField(upload_to='img')
+    duration =models.CharField(max_length=120)
+    info= models.CharField(max_length=200)
+    button =models.CharField(max_length=100)
+    def __str__(self) -> str:
+        return self.product_name
 
 # class Sign(models.Model):
 #     fname=models.CharField(max_length=120)
