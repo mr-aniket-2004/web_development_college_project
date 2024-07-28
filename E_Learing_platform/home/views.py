@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect , HttpResponse
 from datetime import datetime
-from .models import Contact ,course
+from .models import Contact ,course, sign_up_table
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -44,14 +44,21 @@ def sign(request):
         username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
-        password1 = request.POST.get('password1')
-        if password == password1:
-            myuser = User.objects.create_user(username=username,email=email,password=password)
-            myuser.save()
-            return redirect('log')
-        else:
-            return HttpResponse("password and confirm not same")
+        mobile_no = request.POST.get('cont_no')
+        role= request.POST.get('role')
+        print(request.POST)
+        # if password == password1:
+        myuser = User.objects.create_user(email=email,username=username,password=password)
+        if role =="teacher":
+            myuser.is_staff = True
+        myuser.save()
+        sign_up =sign_up_table(main=myuser,mobile=mobile_no)
+        sign_up.save()
+        return render(request,"singup.html",{"status":"Hey, {} Registered Successfully".format(username)})
     return render(request, "singup.html")   
+
+
+
 
 
 def log(request):
@@ -61,7 +68,7 @@ def log(request):
         key_user = authenticate(request,username=username,password=password)
         if key_user is not None:
             login(request,key_user)
-            return redirect('home')
+            return redirect('dashboard')
         else:
             return HttpResponse("worng info")
     return render(request, "login.html")

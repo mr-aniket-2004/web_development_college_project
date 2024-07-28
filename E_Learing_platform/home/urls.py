@@ -11,7 +11,7 @@ urlpatterns = [
     path("log",views.log, name= "log"),
     path("sign",views.sign, name= "sign"),
     path("python",views.python,name="python"),
-    path("java",views.java,name="java")
+    path("java",views.java,name="java"),
 ]
 # urlpatterns = [
 #     path("",views.index, name= "home"),

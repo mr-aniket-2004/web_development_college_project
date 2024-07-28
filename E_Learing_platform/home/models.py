@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Contact(models.Model):
@@ -21,18 +22,10 @@ class course(models.Model):
     def __str__(self) -> str:
         return self.product_name
 
-# class Sign(models.Model):
-#     fname=models.CharField(max_length=120)
-#     email= models.EmailField(max_length=120)
-#     password = models.CharField(max_length=50)
-#     password1 = models.CharField(max_length=60)
-#     date =models.DateField()
-#     def __str__(self):
-#         return self.fname
-    
-# class log(models.Model):
-#     email=models.EmailField(max_length=120)
-#     password =models.CharField(max_length=100)
-#     date =models.DateField()
-#     def __str__(self):
-#         return self.email
+
+class sign_up_table (models.Model):
+    main = models.OneToOneField(User,on_delete= models.CASCADE)
+    mobile = models.IntegerField()
+
+    def __str__(self) -> str:
+        return self.main.username
