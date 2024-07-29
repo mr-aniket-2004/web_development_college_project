@@ -55,7 +55,10 @@
                             <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                         <span>use your email for registeration</span>
-                        <input type="text" placeholder="Name" name="username" required>
+                        <div class="alert">
+                            <p id="alert" style="color: red;"></p>
+                        </div>
+                        <input type="text" placeholder="Name" name="username" required id="user_name" onkeyup="check_user()">
                         <input type="email" placeholder="Email" name="email" required>
                         <input type="password" placeholder="Password" name="password" required>
                         <input type="number" placeholder=" Contact No" name="cont_no" required>
@@ -65,13 +68,36 @@
                             <input type="radio" name="role" id="role" required value="student">
                             <label for="role">student</label>
                         </div>
-                        <button type="submit" name="save">Sign Up</button>
+                        <button type="submit" name="save" id="btns">Sign Up</button>
                         
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function check_user()
+        {
+            let un =document.getElementById("user_name").value;
+            $.ajax({
+                url: "{% url 'check_user' %}",
+                type: "get",
+                data:{usern:un},
+                success:function(data){
+                    if (data=="exist")
+                    {
+                        $("#alert").html("Username is already taken").addClass("text-danger");
+                        $("#user_name").addClass("danger");
+                        $("#btns").attr("disabled","disabled");
+
+                    }else{
+                        $("#alert").html("");
+                        $("#btns").removeAttr("disabled");
+                    }
+                }
+            })
+        }
+    </script>
     <footer>
         <div class="footer">
             <div class="inner-footer">
@@ -144,6 +170,12 @@
         </div>
 
     </footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 
 </html>

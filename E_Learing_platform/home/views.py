@@ -59,13 +59,20 @@ def sign(request):
 
 
 
-
+def check_user(request):
+    if request.method =="GET":
+        un=request.GET["usern"]
+        check =User.objects.filter(username=un)
+        if len(check)==1:
+            return HttpResponse("exist")
+        else:
+            return HttpResponse("not exist")
 
 def log(request):
     if request.method == "POST":
         username=request.POST.get('username')
         password = request.POST.get('password')
-        key_user = authenticate(request,username=username,password=password)
+        key_user = authenticate(request,username=username,password=password )
         if key_user is not None:
             login(request,key_user)
             return redirect('dashboard')

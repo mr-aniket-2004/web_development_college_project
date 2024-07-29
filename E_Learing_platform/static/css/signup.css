@@ -182,3 +182,13 @@ h1{
     height: 40px;
     font-size: 1.05rem;
 }
+.danger{
+    background-color: red;
+}
+
+.alert >p{
+    color: white;
+}
+#alert{
+    color: white;
+}
