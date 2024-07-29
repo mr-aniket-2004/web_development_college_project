@@ -69,8 +69,6 @@ def log(request):
         if key_user is not None:
             login(request,key_user)
             return redirect('dashboard')
-        else:
-            return HttpResponse("worng info")
     return render(request, "login.html")
 
 
