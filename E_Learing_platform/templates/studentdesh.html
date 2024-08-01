@@ -18,18 +18,9 @@
         #nav {
             margin: 0;
             padding: 0;
-            /* max-width: 55px; */
-            /* overflow: hidden; */
-            /* text-align: center; */
             color: black;
-            /* transition: all .5s; */
 
         }
-
-        /* #nav:hover{
-                max-width: 1000px;
-                overflow: visible;
-            } */
         .left-nav {
             min-width: 0;
             max-width: 55px;
@@ -39,27 +30,42 @@
 
         .left-nav.active {
             float: left;
-            max-width: 500px;
+            max-width: 30%;
         }
 
         .right-side {
-            max-width: 80%;
+            max-width: 100%;
+            padding: 10px;
+        }
+        #nav>li{
+            width: 300px;
+        }
+        .profile{
+            max-width: 400px;
         }
     </style>
 </head>
 
 <body>
-    <div class="main-body d-flex" style=" min-width: 100%;">
+    <div class="top " style="max-width:800px;margin: auto;align-items: center;border: 2px solid red;">
+        <div class="logo-m">
+            <img src="../static/main.logo-1.png" alt="" style="width: 100px; height: 100px;">
+        </div>
+        <h2 class="name">Hello, {{user.username}}</h2>
+        <div class="search d-flex" style="border: 1px solid gray; max-width: 600px; justify-content: space-between;align-items: center;padding: 10px 20px;border-radius: 12px; float: right;">
+            <input type="text" name="" id="" placeholder="search anything here" style=" border: none;max-width: 600px;">
+            <i class='bx bx-search'></i>
+        </div>
+        <div class="notification">
+            <i class='bx bxs-bell' style="font-size: 2rem;color: rgb(149, 149, 6);" ></i>
+        </div>
+    </div>
+    <div class="main-body d-flex" style=" max-width: 100%;">
         <div class="left-nav " id="left-nav">
             <div class="close" id="close-btn">
                 <i class='bx bx-list-ul' style="font-size: 2rem;"></i>
             </div>
             <ul class="list-group list-group-flush" id="nav">
-                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon "
-                            style="margin-right: 20px;  color: black; font-size: 1.5rem;"><i
-                                class='bx bxs-user'></i></i></span>
-                        <p style="color: black; ">Profile</p>
-                    </a></li>
                 <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
                             style="margin-right: 20px;  color: black; font-size: 1.5rem;"><i
                                 class='bx bxs-dashboard'></i></span>
@@ -85,17 +91,20 @@
                                 class='bx bx-conversation'></i></span>
                         <p style="color: black; ">Communicate</p>
                     </a></li>
-                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
+                <li class="list-group-item"><a href="/log" class="d-flex" style="text-decoration: none;"><span class="icon"
                             style="margin-right: 20px; color: black; font-size: 1.5rem;"><i
                                 class='bx bx-exit'></i></span>
                         <p style="color: black; ">Logout</p>
                     </a></li>
             </ul>
         </div>
-        <div class="right-side">
+        <div class="right-side" style="border: 1px solid red;">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nulla veniam quisquam. Laudantium vitae
                 molestias ex, odio sapiente quibusdam debitis iusto beatae accusamus vel sequi ipsa doloremque
                 voluptatum neque necessitatibus.</p>
+        </div>
+        <div class="profile">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa obcaecati nisi eligendi similique id, officia, at numquam reprehenderit eaque illum nesciunt excepturi placeat. Molestias dicta commodi reiciendis expedita, accusantium voluptate!
         </div>
     </div>
 
@@ -113,7 +122,7 @@
             main.classList.toggle('active')
         });
     </script>
->>>>>>> 8fac1634b01d88263787e3bf81883c152d081bdc
+
 </body>
 
 </html>
