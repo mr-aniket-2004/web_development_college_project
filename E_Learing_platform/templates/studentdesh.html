@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #nav {
+            margin: 0;
+            padding: 0;
+            /* max-width: 55px; */
+            /* overflow: hidden; */
+            /* text-align: center; */
+            color: black;
+            /* transition: all .5s; */
+
+        }
+
+        /* #nav:hover{
+                max-width: 1000px;
+                overflow: visible;
+            } */
+        .left-nav {
+            min-width: 0;
+            max-width: 55px;
+            transition: all .5s;
+            overflow: hidden;
+        }
+
+        .left-nav.active {
+            float: left;
+            max-width: 500px;
+        }
+
+        .right-side {
+            max-width: 80%;
+        }
+    </style>
 </head>
+
 <body>
+<<<<<<< HEAD
     <h1>welcome to Student Dashboard</h1>
     <h2>welcom Mr. {{user.username}}</h2>
     <p>your contact no {{user.sign_up_table.mobile}}</p>
@@ -14,5 +58,72 @@
     {% csrf_token %}
     <input type="submit" value="log out">
  </form>
+=======
+    <div class="main-body d-flex" style=" min-width: 100%;">
+        <div class="left-nav " id="left-nav">
+            <div class="close" id="close-btn">
+                <i class='bx bx-list-ul' style="font-size: 2rem;"></i>
+            </div>
+            <ul class="list-group list-group-flush" id="nav">
+                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon "
+                            style="margin-right: 20px;  color: black; font-size: 1.5rem;"><i
+                                class='bx bxs-user'></i></i></span>
+                        <p style="color: black; ">Profile</p>
+                    </a></li>
+                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
+                            style="margin-right: 20px;  color: black; font-size: 1.5rem;"><i
+                                class='bx bxs-dashboard'></i></span>
+                        <p style="color: black; ">Dashboard</p>
+                    </a></li>
+                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
+                            style="margin-right: 20px; color: black; font-size: 1.5rem;"><i
+                                class='bx bxs-food-menu'></i></span>
+                        <p style="color: black; ">Courses</p>
+                    </a></li>
+                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
+                            style="margin-right: 20px; color: black; font-size: 1.5rem;"><i
+                                class='bx bx-clipboard'></i></span>
+                        <p style="color: black; ">Assignments and Test</p>
+                    </a></li>
+                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
+                            style="margin-right: 20px; color: black; font-size: 1.5rem;"><i
+                                class='bx bx-bar-chart'></i></span>
+                        <p style="color: black; ">Progress Tracking </p>
+                    </a></li>
+                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
+                            style="margin-right: 20px; color: black; font-size: 1.5rem;"><i
+                                class='bx bx-conversation'></i></span>
+                        <p style="color: black; ">Communicate</p>
+                    </a></li>
+                <li class="list-group-item"><a href="" class="d-flex" style="text-decoration: none;"><span class="icon"
+                            style="margin-right: 20px; color: black; font-size: 1.5rem;"><i
+                                class='bx bx-exit'></i></span>
+                        <p style="color: black; ">Logout</p>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="right-side">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nulla veniam quisquam. Laudantium vitae
+                molestias ex, odio sapiente quibusdam debitis iusto beatae accusamus vel sequi ipsa doloremque
+                voluptatum neque necessitatibus.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- <form method="post" action="{% url 'log' %}">
+            {% csrf_token %}
+            <input type="submit" value="log out">
+        </form></li> -->
+    <script>
+        const btn =document.getElementById('close-btn');
+        const main = document.getElementById('left-nav');
+        btn.addEventListener('click', function()  {
+            main.classList.toggle('active')
+        });
+    </script>
+>>>>>>> 8fac1634b01d88263787e3bf81883c152d081bdc
 </body>
+
 </html>
