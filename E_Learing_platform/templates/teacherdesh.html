@@ -6,13 +6,13 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>welcome to Student Dashboard</h1>
+    <h1>Welcome to teacher Dashboard</h1>
     <h2>welcom Mr. {{user.username}}</h2>
     <p>your contact no {{user.sign_up_table.mobile}}</p>
     <p>your email : {{user.email}}</p>
- <form method="post" action="{% url 'log' %}">
-    {% csrf_token %}
-    <input type="submit" value="log out">
- </form>
+    <form method="post" action="{% url 'log' %}">
+        {% csrf_token %}
+        <input type="submit" value="log out">
+     </form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-from django.shortcuts import render , redirect , HttpResponse
+from django.shortcuts import render , redirect , HttpResponse, HttpResponseRedirect
 from datetime import datetime
 from .models import Contact ,course, sign_up_table
 from django.contrib import messages
@@ -75,7 +75,13 @@ def log(request):
         key_user = authenticate(request,username=username,password=password )
         if key_user is not None:
             login(request,key_user)
-            return redirect('dashboard')
+            if key_user.is_superuser:
+                return HttpResponseRedirect('admin')
+            if key_user.is_staff:
+                return redirect('teachdash')
+            if key_user.is_active:
+                return redirect('dashboard')
+            # return redirect('dashboard')
     return render(request, "login.html")
 
 

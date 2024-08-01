@@ -20,10 +20,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls ,name="admin"),
     path("",include('home.urls')),
     path("student",include('student.urls')),
+    path("teacher",include('teacher.urls')),
 
 ]
 
 urlpatterns= urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+admin.site.site_header = "GURUKUL ADMINISTRATION"
+admin.site.site_title = "GURUKUL Admin Portal"
+admin.site.index_title = "Welcome to GURUKUL Admin Portal"
