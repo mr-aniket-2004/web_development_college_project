@@ -5,6 +5,8 @@ from student import views
 
 
 urlpatterns = [
-   path("stud",views.index1,name='dashboard'),
+   path("/student",views.index1,name='dashboard'),
+   path("/update",views.update_info, name="update_info"),
+   path("/feedback",views.feedback_info, name="feedback_info"),
 #    path("log",views.student_logout,name='log'),
 ]

@@ -6,5 +6,6 @@ from teacher import views
 
 urlpatterns = [
    path("teach",views.index1,name='teachdash'),
+   
 #    path("log",views.student_logout,name='log'),
 ]

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path ,include
 from home import views
 
 urlpatterns = [
@@ -13,6 +13,8 @@ urlpatterns = [
     path("python",views.python,name="python"),
     path("java",views.java,name="java"),
     path("check_user",views.check_user,name="check_user"),
+    path("student",include('student.urls')),
+    # path("update",views.update_info, name="update_info")
 ]
 # urlpatterns = [
 #     path("",views.index, name= "home"),

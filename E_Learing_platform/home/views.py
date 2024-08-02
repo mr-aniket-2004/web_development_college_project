@@ -96,3 +96,7 @@ def java(request):
         "var":"this is java"
     }
     return render(request, "python.html",context)
+
+
+# def update_info(request):
+#     return render(request, "update_form.html")
