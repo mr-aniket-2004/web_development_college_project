@@ -26,6 +26,16 @@ class course(models.Model):
 class sign_up_table (models.Model):
     main = models.OneToOneField(User,on_delete= models.CASCADE)
     mobile = models.IntegerField()
-
+    profile_pic = models.ImageField(upload_to='profiles')
+    f_name = models.CharField(max_length=120)
+    s_name = models.CharField(max_length=200)
+    add = models.CharField(max_length=500)
+    city_name = models.CharField(max_length=100)
+    state =models.CharField(max_length=50)
+    pincode = models.IntegerField()
+    p_mobile = models.CharField(max_length=15)
+    p_email =models.CharField(max_length=100)
+    qualification = models.CharField(max_length=200)
+    collge_name = models.CharField(max_length=200)
     def __str__(self) -> str:
         return self.main.username
